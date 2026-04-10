@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="富縁パートナーズ — ウェルスマネジメント専門の転職エージェント。非公開求人のご案内。プライベートバンカー、ウェルスアドバイザー、BDM。">
+<meta property="og:title" content="富縁パートナーズ | Fuen Partners">
+<meta property="og:description" content="ウェルスマネジメント専門。非公開キャリア情報をご提供いたします。">
+<meta property="og:url" content="https://fuenpartners.com">
+<meta name="theme-color" content="#0d0d0d">
+<title>富縁パートナーズ | Fuen Partners — Wealth Management Recruitment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+:root{
+  --sumi:#0d0d0d;--sumi-mid:#161412;--sumi-soft:#1e1b17;
+  --gold:#c9a84c;--gold-bright:#d4a843;--gold-dim:#9a7a32;--gold-pale:#e8d5a0;
+  --gold-wash:rgba(201,168,76,.07);--washi:#f5f0e8;
+  --stone:#7a7060;--stone-light:#a09080;
+  --white-soft:rgba(255,255,255,.82);--white-dim:rgba(255,255,255,.45);
+  --line-gold:rgba(201,168,76,.18);--line-dark:rgba(255,255,255,.06)
+}
+body{background:var(--sumi);color:var(--white-soft);font-family:'Jost',sans-serif;font-weight:300;line-height:1.8;overflow-x:hidden}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--sumi)}::-webkit-scrollbar-thumb{background:var(--gold-dim)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 56px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,13,13,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line-dark)}
+.nav-logo{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:300;color:var(--gold-bright);letter-spacing:.12em;text-decoration:none;display:flex;align-items:center;gap:16px}
+.nav-sep{width:1px;height:20px;background:var(--gold-dim);opacity:.4}
+.nav-en{font-family:'Jost',sans-serif;font-size:11px;font-weight:200;letter-spacing:.3em;color:var(--stone-light);text-transform:uppercase}
+.nav-cta{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;text-decoration:none;padding:10px 24px;border:1px solid rgba(201,168,76,.3);transition:all .3s ease}
+.nav-cta:hover{background:var(--gold);color:var(--sumi);border-color:var(--gold)}
+@media(max-width:600px){nav{padding:0 24px}.nav-sep,.nav-en{display:none}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 40px 100px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(201,168,76,.055) 0%,transparent 65%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.03) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 80%)}
+.hero-wm{position:absolute;font-family:'Noto Serif JP',serif;font-size:min(38vw,500px);font-weight:200;color:rgba(201,168,76,.028);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;user-select:none;letter-spacing:-.05em;line-height:1}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.5em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:48px;position:relative;opacity:0;animation:rise 1s .2s cubic-bezier(.16,1,.3,1) forwards}
+.hero-mark{font-family:'Noto Serif JP',serif;font-size:clamp(88px,14vw,168px);font-weight:200;color:var(--gold-bright);letter-spacing:.22em;line-height:1;margin-bottom:28px;opacity:0;animation:rise 1.1s .35s cubic-bezier(.16,1,.3,1) forwards;text-shadow:0 0 120px rgba(201,168,76,.15)}
+.hero-roman{font-family:'Cormorant Garamond',serif;font-size:clamp(14px,2.2vw,22px);font-weight:300;font-style:italic;color:var(--stone-light);letter-spacing:.3em;margin-bottom:64px;opacity:0;animation:rise 1s .5s cubic-bezier(.16,1,.3,1) forwards}
+.hero-tagline{font-family:'Noto Serif JP',serif;font-size:clamp(17px,2.5vw,24px);font-weight:300;color:var(--white-dim);line-height:2.1;max-width:640px;margin:0 auto 72px;opacity:0;animation:rise 1s .65s cubic-bezier(.16,1,.3,1) forwards;letter-spacing:.05em}
+.hero-actions{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;opacity:0;animation:rise 1s .8s cubic-bezier(.16,1,.3,1) forwards}
+.hero-scroll{position:absolute;bottom:48px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;opacity:0;animation:rise 1s 1.2s ease forwards}
+.hero-scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,var(--gold),transparent);animation:pulse 2s infinite}
+.hero-scroll-txt{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.35em;color:var(--stone);text-transform:uppercase;writing-mode:vertical-rl}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* BUTTONS */
+.btn-primary{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:300;letter-spacing:.15em;color:var(--sumi);background:var(--gold-bright);padding:16px 40px;text-decoration:none;transition:all .3s ease;display:inline-block}
+.btn-primary:hover{background:var(--gold-pale);transform:translateY(-2px)}
+.btn-ghost{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.25em;color:var(--gold);background:transparent;border:1px solid rgba(201,168,76,.3);padding:16px 36px;text-decoration:none;transition:all .3s ease;display:inline-block;text-transform:uppercase}
+.btn-ghost:hover{border-color:var(--gold);background:var(--gold-wash)}
+
+/* SECTIONS */
+section{padding:120px 56px;position:relative}
+.container{max-width:1080px;margin:0 auto}
+.eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.45em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:18px}
+.eyebrow::before{content:'';width:32px;height:1px;background:var(--gold-dim);flex-shrink:0}
+.ttl-jp{font-family:'Noto Serif JP',serif;font-size:clamp(28px,4vw,52px);font-weight:200;color:white;line-height:1.4;margin-bottom:16px;letter-spacing:.05em}
+.ttl-en{font-family:'Cormorant Garamond',serif;font-size:clamp(13px,1.8vw,18px);font-style:italic;font-weight:300;color:var(--stone);letter-spacing:.2em;margin-bottom:56px}
+.sec-lead{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:300;color:rgba(255,255,255,.55);line-height:2.2;max-width:640px;margin-bottom:72px;letter-spacing:.04em}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent);opacity:.2}
+
+/* PHILOSOPHY */
+.philosophy{background:var(--sumi-mid);overflow:hidden}
+.phil-inner{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}
+@media(max-width:860px){.phil-inner{grid-template-columns:1fr;gap:56px}}
+.phil-char{font-family:'Noto Serif JP',serif;font-size:clamp(80px,12vw,140px);font-weight:200;color:var(--gold);line-height:1;display:block;margin-bottom:24px;letter-spacing:.15em}
+.phil-meaning{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-style:italic;font-weight:300;color:var(--white-soft);margin-bottom:32px;line-height:1.2}
+.phil-desc{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:300;color:var(--stone-light);line-height:2.2;letter-spacing:.04em}
+.phil-right blockquote{border-left:2px solid var(--gold);padding-left:40px;margin-bottom:48px}
+.phil-right blockquote p{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:300;color:rgba(255,255,255,.7);line-height:2.2;letter-spacing:.05em;margin-bottom:16px}
+.phil-right blockquote cite{font-family:'DM Mono',monospace;font-size:9px;color:var(--stone);letter-spacing:.3em;text-transform:uppercase;font-style:normal}
+
+/* SERVICES */
+.services{background:var(--sumi)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(201,168,76,.08)}
+@media(max-width:800px){.svc-grid{grid-template-columns:1fr}}
+.svc-card{background:var(--sumi-mid);padding:56px 44px;position:relative;overflow:hidden;transition:background .4s ease}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .4s ease}
+.svc-card:hover{background:var(--sumi-soft)}.svc-card:hover::before{transform:scaleX(1)}
+.svc-num{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:rgba(201,168,76,.1);line-height:1;margin-bottom:24px;display:block}
+.svc-kanji{font-family:'Noto Serif JP',serif;font-size:13px;color:var(--gold);letter-spacing:.2em;margin-bottom:12px;display:block;font-weight:300}
+.svc-title{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:300;color:white;margin-bottom:20px;line-height:1.5;letter-spacing:.05em}
+.svc-desc{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:300;color:var(--stone-light);line-height:2.1;letter-spacing:.03em}
+
+/* ROLES */
+.roles{background:var(--sumi-mid)}
+.roles-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-gold);margin-bottom:64px}
+@media(max-width:700px){.roles-list{grid-template-columns:1fr}}
+.role-item{background:var(--sumi-mid);padding:36px 44px;display:flex;align-items:center;justify-content:space-between;gap:24px;transition:background .3s ease;text-decoration:none}
+.role-item:hover{background:var(--sumi-soft)}
+.role-jp{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:300;color:white;display:block;margin-bottom:6px;letter-spacing:.05em}
+.role-en{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;color:var(--stone);text-transform:uppercase}
+.role-arrow{color:var(--gold);font-size:18px;opacity:.4;transition:opacity .3s,transform .3s;flex-shrink:0}
+.role-item:hover .role-arrow{opacity:1;transform:translateX(4px)}
+
+/* DISCRETION BAND */
+.disc-band{background:var(--gold-bright);padding:40px 56px}
+.disc-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.disc-text{font-family:'Noto Serif JP',serif;font-size:clamp(16px,2.5vw,24px);font-weight:300;color:var(--sumi);letter-spacing:.05em;line-height:1.6}
+.disc-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.3em;color:rgba(13,13,13,.5);text-transform:uppercase}
+
+/* TRUST */
+.trust{background:var(--sumi);text-align:center}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line-gold);margin-bottom:80px}
+@media(max-width:700px){.trust-grid{grid-template-columns:repeat(2,1fr)}}
+.trust-card{background:var(--sumi-mid);padding:48px 32px;text-align:center;transition:background .3s}
+.trust-card:hover{background:var(--sumi-soft)}
+.trust-kanji{font-family:'Noto Serif JP',serif;font-size:52px;font-weight:200;color:var(--gold);display:block;margin-bottom:16px;opacity:.7;line-height:1}
+.trust-title{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:300;color:white;margin-bottom:10px;letter-spacing:.05em}
+.trust-sub{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;color:var(--stone);text-transform:uppercase;line-height:1.6}
+
+/* CONTACT */
+.contact{background:var(--sumi-mid)}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+@media(max-width:860px){.contact-inner{grid-template-columns:1fr;gap:56px}}
+.contact-note{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:300;color:var(--stone-light);line-height:2.2;margin-bottom:48px;letter-spacing:.04em}
+.contact-ch{display:flex;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--line-dark)}
+.ch-icon{font-size:22px;flex-shrink:0;width:40px;text-align:center;margin-top:2px}
+.ch-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.25em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:6px;display:block}
+.ch-val{font-family:'Noto Serif JP',serif;font-size:15px;color:white;font-weight:300;letter-spacing:.05em}
+.ch-val a{color:white;text-decoration:none;transition:color .2s}
+.ch-val a:hover{color:var(--gold)}
+
+/* FORM */
+.enquiry-form{display:flex;flex-direction:column;gap:0}
+.form-group{margin-bottom:2px}
+.form-group label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.3em;color:var(--stone);text-transform:uppercase;display:block;margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--sumi-soft);border:1px solid var(--line-dark);border-bottom-color:rgba(201,168,76,.15);color:white;font-family:'Noto Serif JP',serif;font-size:14px;font-weight:300;padding:16px 20px;outline:none;transition:border-color .3s ease,background .3s ease;-webkit-appearance:none;appearance:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:rgba(201,168,76,.5);background:rgba(201,168,76,.04)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--stone);font-size:13px}
+.form-group select option{background:var(--sumi-soft)}
+.form-group textarea{resize:none;height:120px;line-height:1.8}
+.form-note{font-family:'Noto Serif JP',serif;font-size:12px;color:var(--stone);line-height:1.9;margin:20px 0 28px;letter-spacing:.03em}
+.form-submit{background:var(--gold-bright);color:var(--sumi);border:none;font-family:'Noto Serif JP',serif;font-size:15px;font-weight:400;letter-spacing:.15em;padding:18px 0;cursor:pointer;width:100%;transition:all .3s ease}
+.form-submit:hover{background:var(--gold-pale);transform:translateY(-2px)}
+.form-status{font-family:'Noto Serif JP',serif;font-size:12px;margin-top:12px;text-align:center;min-height:20px}
+
+/* FOOTER */
+footer{background:var(--sumi);border-top:1px solid var(--line-dark);padding:80px 56px 56px}
+.footer-inner{max-width:1080px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:60px;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--line-dark)}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr;gap:48px}}
+.footer-brand{font-family:'Noto Serif JP',serif;font-size:36px;font-weight:200;color:var(--gold);letter-spacing:.15em;display:block;margin-bottom:16px}
+.footer-brand-en{font-family:'Jost',sans-serif;font-size:11px;font-weight:200;letter-spacing:.4em;color:var(--stone);text-transform:uppercase;margin-bottom:24px;display:block}
+.footer-tagline{font-family:'Noto Serif JP',serif;font-size:13px;font-weight:300;color:var(--stone-light);line-height:2;letter-spacing:.04em}
+.footer-col-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.3em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--line-dark)}
+.footer-links{list-style:none}
+.footer-links li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.footer-links a{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:300;color:var(--stone-light);text-decoration:none;letter-spacing:.04em;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-copy{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;color:var(--stone);text-transform:uppercase;line-height:1.8}
+.footer-parent{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;color:var(--stone);line-height:1.8;text-align:right}
+.footer-parent a{color:var(--gold-dim);text-decoration:none;transition:color .2s}
+.footer-parent a:hover{color:var(--gold)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+@media(max-width:600px){section{padding:80px 24px}.disc-band{padding:32px 24px}footer{padding:64px 24px 48px}.footer-bottom{flex-direction:column;text-align:center}.footer-parent{text-align:center}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    富縁
+    <div class="nav-sep"></div>
+    <span class="nav-en">Fuen Partners</span>
+  </a>
+  <a href="#contact" class="nav-cta">ご相談はこちら</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-wm">縁</div>
+  <div class="hero-eyebrow">Wealth Management Recruitment · Japan</div>
+  <div class="hero-mark">富縁</div>
+  <div class="hero-roman">Fuen Partners — Wealth Connections</div>
+  <p class="hero-tagline">
+    ウェルスマネジメントの世界で、<br>
+    あなたのキャリアに<br>
+    最良の縁を結ぶ。
+  </p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">非公開求人のご相談</a>
+    <a href="#philosophy" class="btn-ghost">私たちについて</a>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <div class="hero-scroll-txt">scroll</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy" id="philosophy">
+  <div class="container">
+    <div class="phil-inner">
+      <div class="reveal">
+        <span class="phil-char">縁</span>
+        <p class="phil-meaning">Destined Connection</p>
+        <p class="phil-desc">
+          「縁」とは、人と人との間に<br>
+          生まれる見えない絆のことです。<br><br>
+          富縁パートナーズは、<br>
+          ウェルスマネジメントのプロフェッショナルと、<br>
+          最良の機会との間にある<br>
+          その縁を、静かに、丁寧に結びます。<br><br>
+          採用活動ではなく、<br>
+          縁結びがわたしたちの仕事です。
+        </p>
+      </div>
+      <div class="phil-right reveal d2">
+        <div class="eyebrow">私たちの約束</div>
+        <div class="ttl-jp" style="font-size:clamp(22px,3vw,36px);margin-bottom:40px;">Our Promise</div>
+        <blockquote>
+          <p>お客様の現職には、一切ご連絡いたしません。<br><br>ご相談の内容、お名前、ご経歴はすべて厳重に管理し、ご同意なく第三者にお伝えすることはございません。</p>
+          <cite>非公開の厳守 — Absolute Discretion</cite>
+        </blockquote>
+        <blockquote>
+          <p>転職をお考えでなくても、市場情報のご確認だけでもお気軽にご相談ください。<br><br>縁は、静かに始まります。</p>
+          <cite>長期的なパートナーシップ — Long-term Partnership</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="eyebrow reveal">専門サービス</div>
+    <div class="ttl-jp reveal">ご提供するサービス</div>
+    <div class="ttl-en reveal">What We Do</div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <span class="svc-num">一</span>
+        <span class="svc-kanji">非公開求人のご案内</span>
+        <div class="svc-title">Confidential<br>Opportunity Access</div>
+        <p class="svc-desc">市場に出ていない非公開ポジションを厳選してご案内いたします。<br><br>外資系・国内大手を問わず、ウェルスマネジメント分野の上質な機会のみをご提供します。</p>
+      </div>
+      <div class="svc-card reveal d2">
+        <span class="svc-num">二</span>
+        <span class="svc-kanji">キャリア戦略のご相談</span>
+        <div class="svc-title">Career Strategy<br>Consultation</div>
+        <p class="svc-desc">現在の市場動向、報酬水準、各社の文化・成長性について客観的な情報をご提供します。<br><br>転職の意思がなくても、情報収集のご相談を歓迎します。</p>
+      </div>
+      <div class="svc-card reveal d3">
+        <span class="svc-num">三</span>
+        <span class="svc-kanji">長期的なご支援</span>
+        <div class="svc-title">Long-term<br>Career Partnership</div>
+        <p class="svc-desc">一度限りのご縁ではなく、長期的なキャリアパートナーとして継続的にご支援いたします。<br><br>あなたのキャリアの各段階で、最良の選択肢をともに考えます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ROLES -->
+<section class="roles" id="roles">
+  <div class="container">
+    <div class="eyebrow reveal">専門職種</div>
+    <div class="ttl-jp reveal">ご支援できる職種</div>
+    <div class="ttl-en reveal">Specialist Roles</div>
+    <p class="sec-lead reveal">富縁パートナーズは、ウェルスマネジメント分野のミドル・シニアレベルに特化しています。</p>
+    <div class="roles-list reveal">
+      <div class="role-item">
+        <div><span class="role-jp">ウェルス・アドバイザー</span><span class="role-en">Wealth Advisor · Senior / Principal</span></div>
+        <span class="role-arrow">→</span>
+      </div>
+      <div class="role-item">
+        <div><span class="role-jp">プライベート・バンカー</span><span class="role-en">Private Banker · UHNW Focus</span></div>
+        <span class="role-arrow">→</span>
+      </div>
+      <div class="role-item">
+        <div><span class="role-jp">ビジネス・デベロップメント</span><span class="role-en">Business Development Manager</span></div>
+        <span class="role-arrow">→</span>
+      </div>
+      <div class="role-item">
+        <div><span class="role-jp">リレーションシップ・マネージャー</span><span class="role-en">Relationship Manager · Senior RM</span></div>
+        <span class="role-arrow">→</span>
+      </div>
+      <div class="role-item">
+        <div><span class="role-jp">投資アドバイザー</span><span class="role-en">Investment Advisor · Portfolio Specialist</span></div>
+        <span class="role-arrow">→</span>
+      </div>
+      <div class="role-item">
+        <div><span class="role-jp">セールス・チームリーダー</span><span class="role-en">Sales Team Leader · Player-Manager</span></div>
+        <span class="role-arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCRETION BAND -->
+<div class="disc-band">
+  <div class="disc-inner">
+    <div>
+      <div class="disc-label" style="margin-bottom:10px;">Our Commitment</div>
+      <div class="disc-text">すべてのご相談は、<strong>完全非公開</strong>にて対応いたします。</div>
+    </div>
+    <div>
+      <div class="disc-text" style="font-size:clamp(13px,1.8vw,17px);opacity:.75;">現職へのご連絡は一切いたしません。<br>ご安心の上、お問い合わせください。</div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="container">
+    <div class="eyebrow reveal" style="justify-content:center;">富縁パートナーズの価値観</div>
+    <div class="ttl-jp reveal" style="text-align:center;margin-bottom:8px;">私たちが大切にすること</div>
+    <div class="ttl-en reveal" style="text-align:center;">Our Core Values</div>
+    <div class="trust-grid">
+      <div class="trust-card reveal"><span class="trust-kanji">信</span><div class="trust-title">信頼</div><div class="trust-sub">Trust · Integrity</div></div>
+      <div class="trust-card reveal d1"><span class="trust-kanji">誠</span><div class="trust-title">誠実</div><div class="trust-sub">Sincerity · Honesty</div></div>
+      <div class="trust-card reveal d2"><span class="trust-kanji">秘</span><div class="trust-title">秘密厳守</div><div class="trust-sub">Absolute Discretion</div></div>
+      <div class="trust-card reveal d3"><span class="trust-kanji">縁</span><div class="trust-title">縁を結ぶ</div><div class="trust-sub">Meaningful Connection</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="reveal">
+        <div class="eyebrow">ご相談はこちら</div>
+        <div class="ttl-jp">お問い合わせ</div>
+        <div class="ttl-en">Get in Touch</div>
+        <p class="contact-note">
+          転職をお考えの方も、<br>
+          まず情報収集をしたい方も、<br>
+          どうぞお気軽にご連絡ください。<br><br>
+          すべてのご相談は、完全非公開にて対応いたします。<br>
+          現職へのご連絡は一切いたしません。
+        </p>
+
+        <div class="contact-ch">
+          <div class="ch-icon">📩</div>
+          <div>
+            <span class="ch-label">Instagram DM</span>
+            <div class="ch-val">
+              <a href="https://instagram.com/fuen.partners" target="_blank">@fuen.partners</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-ch">
+          <div class="ch-icon">💬</div>
+          <div>
+            <span class="ch-label">WhatsApp</span>
+            <div class="ch-val">
+              <a href="https://wa.me/61413133524" target="_blank">+61 413 133 524</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-ch">
+          <div class="ch-icon">✉️</div>
+          <div>
+            <span class="ch-label">Direct Email — James O'Callaghan</span>
+            <div class="ch-val">
+              <a href="/cdn-cgi/l/email-protection#284249454d5b68494b4744515c4d4d504d4b5d5c415e4d064b4745"><span class="__cf_email__" data-cfemail="adc7ccc0c8deedcccec2c1d4d9c8c8d5c8ced8d9c4dbc883cec2c0">[email&#160;protected]</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-ch">
+          <div class="ch-icon">🌐</div>
+          <div>
+            <span class="ch-label">Operating Worldwide from Australia</span>
+            <div class="ch-val">fuenpartners.com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal d2">
+        <div class="eyebrow" style="margin-bottom:32px;">匿名でのお問い合わせも歓迎します</div>
+
+        <!-- Success message (shown by Formspree after submit) -->
+        <div data-fs-success style="display:none;text-align:center;padding:48px 0;">
+          <div style="font-family:'Noto Serif JP',serif;font-size:32px;color:var(--gold);margin-bottom:20px;">ありがとうございます</div>
+          <div style="font-family:'Noto Serif JP',serif;font-size:15px;color:var(--stone-light);line-height:2.2;">お問い合わせを受け付けました。<br>24時間以内にご連絡いたします。<br><br>— James O'Callaghan<br>富縁パートナーズ</div>
+        </div>
+
+        <!-- Form-level error (network / server issues) -->
+        <div data-fs-error style="display:none;font-family:'Noto Serif JP',serif;font-size:13px;color:#c97a7a;margin-bottom:16px;line-height:1.8;">
+          送信に失敗しました。お手数ですが、<a href="mailto:james@acolyteexecutive.com" style="color:var(--gold);">james@acolyteexecutive.com</a> まで直接ご連絡ください。
+        </div>
+
+        <form id="fuen-enquiry" class="enquiry-form">
+
+          <div class="form-group">
+            <label>お名前（任意）</label>
+            <input type="text" name="name" data-fs-field placeholder="田中 健二（匿名でも可）">
+            <span data-fs-error="name" style="font-family:'Noto Serif JP',serif;font-size:11px;color:#c97a7a;"></span>
+          </div>
+
+          <div class="form-group">
+            <label>ご連絡先（メール / WhatsApp / LINE ID）</label>
+            <input type="text" name="contact" data-fs-field placeholder="返信先をご記入ください" required>
+            <span data-fs-error="contact" style="font-family:'Noto Serif JP',serif;font-size:11px;color:#c97a7a;"></span>
+          </div>
+
+          <div class="form-group">
+            <label>現在のご職種</label>
+            <select name="role" data-fs-field required>
+              <option value="" disabled selected>ご選択ください</option>
+              <option>ウェルス・アドバイザー</option>
+              <option>プライベート・バンカー</option>
+              <option>ビジネス・デベロップメント</option>
+              <option>リレーションシップ・マネージャー</option>
+              <option>投資アドバイザー</option>
+              <option>その他（金融）</option>
+            </select>
+            <span data-fs-error="role" style="font-family:'Noto Serif JP',serif;font-size:11px;color:#c97a7a;"></span>
+          </div>
+
+          <div class="form-group">
+            <label>ご経験年数</label>
+            <select name="experience" data-fs-field required>
+              <option value="" disabled selected>ご選択ください</option>
+              <option>5〜8年</option>
+              <option>8〜12年</option>
+              <option>12〜18年</option>
+              <option>18年以上</option>
+            </select>
+            <span data-fs-error="experience" style="font-family:'Noto Serif JP',serif;font-size:11px;color:#c97a7a;"></span>
+          </div>
+
+          <div class="form-group">
+            <label>ご状況（任意）</label>
+            <textarea name="message" data-fs-field placeholder="転職をお考えの背景や、お知りになりたい情報などをご自由にお書きください。"></textarea>
+            <span data-fs-error="message" style="font-family:'Noto Serif JP',serif;font-size:11px;color:#c97a7a;"></span>
+          </div>
+
+          <p class="form-note">ご記入いただいた情報は、富縁パートナーズのご連絡にのみ使用し、第三者への提供は一切行いません。</p>
+          <button type="submit" class="form-submit" data-fs-submit-btn>送信する — Send Enquiry</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <span class="footer-brand">富縁</span>
+        <span class="footer-brand-en">Fuen Partners</span>
+        <p class="footer-tagline">ウェルスマネジメントの世界で、<br>あなたのキャリアに<br>最良の縁を結ぶ。</p>
+      </div>
+      <div>
+        <div class="footer-col-title">専門職種</div>
+        <ul class="footer-links">
+          <li><a href="#roles">ウェルス・アドバイザー</a></li>
+          <li><a href="#roles">プライベート・バンカー</a></li>
+          <li><a href="#roles">ビジネス・デベロップメント</a></li>
+          <li><a href="#roles">リレーションシップ・マネージャー</a></li>
+          <li><a href="#roles">投資アドバイザー</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">ご連絡</div>
+        <ul class="footer-links">
+          <li><a href="#contact">お問い合わせフォーム</a></li>
+          <li><a href="https://instagram.com/fuen.partners" target="_blank">Instagram @fuen.partners</a></li>
+          <li><a href="https://wa.me/61413133524" target="_blank">WhatsApp +61 413 133 524</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#ef858e828a9caf8e8c8083969b8a8a978a8c9a9b86998ac18c8082"><span class="__cf_email__" data-cfemail="e78d868a8294a78684888b9e9382829f828492938e9182c984888a">[email&#160;protected]</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 富縁パートナーズ — Fuen Partners<br>Wealth Management Recruitment · fuenpartners.com</div>
+      <div class="footer-parent">富縁パートナーズは<br><a href="https://www.acolyteexecutive.com" target="_blank">Acolyte Executive Search</a>（オーストラリア）の<br>日本市場専門部門です。</div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(el => observer.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+// Formspree Ajax initialisation
+window.formspree = window.formspree || function() { (formspree.q = formspree.q || []).push(arguments); };
+formspree('initForm', { formElement: '#fuen-enquiry', formId: 'xzdkqgqk' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>
